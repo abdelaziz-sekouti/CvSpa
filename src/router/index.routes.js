@@ -3,10 +3,11 @@ import Objectif from '../views/objectif';
 import Experience from '../views/experience';
 import Formation from '../views/formation';
 import Competences from '../views/competences';
+import Langues from '../views/langues';
 import Hobbies from '../views/hobbies';
 let content = document.querySelector('.showInfo');
 const router = (route) => {
-	content.style.minHeight = '100';
+	content.style.minHeight = '70vh';
 	content.style.padding = '20px 40px';
 	content.innerHTML = '';
 	switch (route) {
@@ -20,6 +21,8 @@ const router = (route) => {
 			return (content.innerHTML = Formation());
 		case '#/competences':
 			return (content.innerHTML = Competences());
+		case '#/langues':
+			return (content.innerHTML = Langues());
 		case '#/centreInteret':
 			return (content.innerHTML = Hobbies());
 		default:
