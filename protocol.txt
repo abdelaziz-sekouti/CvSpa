@@ -1,0 +1,94 @@
+1 : creation de folder root of SPA
+   /
+        -src:
+            -index.html
+            -main.css
+            -main.js
+2 : install webpack in root : npm install --save-dev webpack
+
+3 : configure webpack by creating a "webpack.config.js" file and add the folling to it :
+/**********************************************************/
+*****                const HTMLWebpackPlugin = require('html-webpack-plugin');
+*****                module.exports = {
+*****                mode: 'development',                    //mode Dev
+*****                entry: './src/main.js',                 //file for js entry
+*****                output: {
+*****                path: __dirname + '/dist',              //folder output path
+*****                filename: 'bundle.js'                   // output filename js
+*****                },
+                    module: {
+                            rules: [
+                                {
+                                    test: /.css$/,
+                                    use: [
+                                        'style-loader',
+                                        'css-loader'
+                                    ]
+                                }
+                            ]
+                        },
+*****                plugins: [
+*****                       new HTMLWebpackPlugin({
+                                template: './src/index.html'
+                            })                 // plugin for output html
+*****                ]
+*****                };
+*****
+*****
+/**********************************************************/
+4 : then execute " npx webpack  "command to compile code to dist folder
+5 : npm i webpack-dev-server -D  //install server
+7 : npx webpack serve         // open server
+  N.B:
+  to know webpack version run ''npx webpack --version '' output for me (( 
+                                                                            webpack 5.24.2
+                                                                            webpack-cli 4.5.0
+                                                                            webpack-dev-server 3.11.2   
+                                                                        ))
+
+
+  : npm install --save-dev css-loader //then in js file add code (    import '.src/main.css'    )
+  and in webpack.config.js add code bellow :
+
+                                                    module.exports = {
+                                                        module: {
+                                                            rules: [
+                                                            {
+                                                                test: /\.css$/i,
+                                                                use: ["style-loader", "css-loader"],
+                                                            },
+                                                            ],
+                                                        },
+                                                        };      
+
+    :  for Bootstrap  dans main.js  add 
+                    import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+                    import 'bootstrap';//bootstrap
+                    import './main.css';                                                   
+    : popperjs   add plugin in webpack.config.js
+                            new webpack.ProvidePlugin({
+                                    $: 'jquery',
+                                    jQuery: 'jquery',
+                                    'window.jQuery': 'jquery',
+                                    Popper: [
+                                        'popper.js',
+                                        'default'
+                                    ]
+                                })      
+                                
+    : sass       add plugin in webpack.config.js  // 
+    ((((        1 : npm install sass-loader sass webpack --save-dev //install sass 
+                2 :  npm install node-sass -D //install node sass
+    
+    ))))
+    {
+				test: /\.s[ac]ss$/i,
+				use: [
+					// Creates `style` nodes from JS strings
+					'style-loader',
+					// Translates CSS into CommonJS
+					'css-loader',
+					// Compiles Sass to CSS
+					'sass-loader'
+				]
+			}                                

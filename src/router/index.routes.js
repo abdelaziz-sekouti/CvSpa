@@ -1,0 +1,29 @@
+import Home from '../views/home';
+import Objectif from '../views/objectif';
+import Experience from '../views/experience';
+import Formation from '../views/formation';
+import Competences from '../views/competences';
+import Hobbies from '../views/hobbies';
+let content = document.querySelector('.showInfo');
+const router = (route) => {
+	content.style.minHeight = '100';
+	content.style.padding = '20px 40px';
+	content.innerHTML = '';
+	switch (route) {
+		case '#/':
+			return (content.innerHTML = Home());
+		case '#/objectif':
+			return (content.innerHTML = Objectif());
+		case '#/experienceProfessionnelle':
+			return (content.innerHTML = Experience());
+		case '#/formation':
+			return (content.innerHTML = Formation());
+		case '#/competences':
+			return (content.innerHTML = Competences());
+		case '#/centreInteret':
+			return (content.innerHTML = Hobbies());
+		default:
+			return console.log('404 error');
+	}
+};
+export { router };
