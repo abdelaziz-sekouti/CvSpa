@@ -12,7 +12,7 @@ export default () => {
     <li> Né le 24/09/1967 à Marrakech</li>
     <li> Célibataire / Nationalité: marocain</li>
 </ul>
-<img src="../assets/moiA.jpg"  alt="">
+<img src="assets/moiA.jpg"  alt="">
 `;
 	return views;
 };
