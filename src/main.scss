@@ -32,7 +32,7 @@ body {
 		.showInfo{
 			margin:  10px auto;
 			border-radius: 20px;
-			box-shadow: 0 0 4px $ancrecolor;
+			box-shadow: 3px 0 4px #fff;
 			min-height: 10vh;
 			width: fit-content;
 			padding: 10pX 40pX 0;
@@ -43,12 +43,23 @@ body {
 			height: 150px;
 			padding: 10pX;
 			background-color: #ccc;
-			
+			margin-bottom: 20px;
+			transition: all .3s ease-in-out;
+			}
+			img:hover{
+			border:5px solid #ccc;
+			background-color: #fff;
+			transform: rotate(20deg);			
 			}
 			h1,h2,h3,h4{
 			font-size: 1rem;
 			color:#c0f;
 			width: fit-content;
+			transition: all .3s ease-in-out;
+		}
+		h1:hover,h2:hover,h3:hover,h4:hover{
+			font-size: 1.4rem;
+			color:#fff;
 
 		}
 		}
@@ -81,7 +92,7 @@ body {
 				img{
 					width:100%;
 					border-radius: 10px;
-					margin-bottom: 10px;
+					margin-bottom: 20px;
 					padding: 0px;
 
 				}
