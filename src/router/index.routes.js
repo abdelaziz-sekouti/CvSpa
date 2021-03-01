@@ -5,7 +5,7 @@ import Formation from '../views/formation';
 import Competences from '../views/competences';
 import Langues from '../views/langues';
 import Hobbies from '../views/hobbies';
-let content = document.querySelector('.showInfo');
+let content = document.querySelector('.showInfo #info');
 const router = (route) => {
 	content.innerHTML = '';
 	switch (route) {

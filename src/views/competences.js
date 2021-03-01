@@ -1,6 +1,6 @@
 export default () => {
 	const views = `
-<h4 class="headin text-light">COMPÉTENCES :</h4>
+<h4 class="text-light">COMPÉTENCES :</h4>
 <ul>
     <li>
         <dl>

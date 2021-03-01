@@ -13,14 +13,16 @@ body {
 		background-color: $bgcolr;
 		ul{
 			list-style: none;
-			width: 100%;
+			min-width: 100%;
 			li{
 				color:$licolor;
 				font-size: 1rem;
+				min-width: 100%;
+				display:block;
 				a{
 					display:block;
 					height: 100%;
-					width: 100%;
+					min-width: 100%;
 					padding: 10px 0;
 					&:hover{
 						color:rgb(235, 18, 18);
@@ -35,7 +37,7 @@ body {
 			box-shadow: 3px 0 4px #fff;
 			min-height: 10vh;
 			width: fit-content;
-			padding: 10pX 40pX 0;
+			padding: 10pX 50pX 0;
 			img{
 			border:5px solid #fff;
 			border-radius: 50%;
@@ -45,22 +47,43 @@ body {
 			background-color: #ccc;
 			margin-bottom: 20px;
 			transition: all .3s ease-in-out;
+			position: relative;
 			}
 			img:hover{
 			border:5px solid #ccc;
 			background-color: #fff;
-			transform: rotate(20deg);			
+			transform: rotate(-20deg);
+			color:#CCC;			
+			}
+			img:hover + h3{
+			// visibility: hidden;
+			letter-spacing: .7rem;
+			text-transform: uppercase;
+			}
+			img::after{
+			content: 'hello ';
+			font-size: 2rem;
+			flood-color: aquamarine;
+			text-transform: uppercase;
+			display:block;
+			position: absolute;
+			top: 0;
+			left: 220px;
 			}
 			h1,h2,h3,h4{
 			font-size: 1rem;
 			color:#c0f;
 			width: fit-content;
-			transition: all .3s ease-in-out;
+			transition: all .4s ease-in-out;
 		}
-		h1:hover,h2:hover,h3:hover,h4:hover{
-			font-size: 1.4rem;
-			color:#fff;
-
+			h1:hover,h2:hover,h3:hover,h4:hover{
+				/* font-size: 1.4rem;
+				color:#fff; */
+			ul{
+				li{
+					width: fit-content;
+				}
+			}
 		}
 		}
 		}
@@ -68,22 +91,16 @@ body {
 			ul{
 			width: fit-content;
 			li{
-				font-size: 1.1em;
-				width: 100%;
+				width: fit-content;
 				a{
 					display:block;
 					height: 100%;
-					width: 100%;
+					width: fit-content;
 					padding: 10px 0;
-					&:hover{
-						color:rgb(235, 18, 18);
-						background-color:$bglicolr;
-					}
 				}
 			}	
 		}
 			.showInfo {
-			font-size: .7rem;
 			box-shadow:-7px 12px 5px 5px #000;
 			color:rgb(14, 15, 3);
 		}
@@ -94,12 +111,10 @@ body {
 					border-radius: 10px;
 					margin-bottom: 20px;
 					padding: 0px;
-
 				}
 				h1,h2,h3,h4{
 					color:rgb(29, 213, 226);
-
+					font-size: 1rem;
 				}
-		
 		}
 		}

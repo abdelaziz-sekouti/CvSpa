@@ -1,6 +1,6 @@
 export default () => {
 	const views = `
-<h4 class="headin text-light">EXPÉRIENCE PROFESSIONNELLE :</h4>
+<h4 class="text-light">EXPÉRIENCE PROFESSIONNELLE :</h4>
 <ul>
     <li>Entre le 06/08/2012 & 03/06/2013 : téléprospecteur (en charpente B2C)</li>
     <li>Entre le 19/08/2013 & 01/03/2014 : téléprospecteur (en P.P.V.B2C)</li>
