@@ -1,28 +1,23 @@
+const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: './src/main.js',
 	output: {
-		path: __dirname + '/dist',
-		filename: 'bundle.js'
+		path: path.resolve(__dirname, './dist'),
+		filename: 'bundle[contenthash].js'
 	},
 	module: {
 		rules: [
 			{
-				test: require.resolve('./src/main.js'),
-				use: [
-					{
-						loader: 'imports-loader',
-						options: {
-							imports: {
-								moduleName: 'jquery',
-								name: '$'
-							},
-							additionalCode: 'var define = false; /* Disable AMD for misbehaving libraries */'
-						}
-					}
-				]
-			},
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
 			{
 				test: /\.css$/,
 				use: [
@@ -45,7 +40,13 @@ module.exports = {
 	},
 	plugins: [
 		new HTMLWebpackPlugin({
-			template: './src/index.html'
-		})
-	]
+			template: './src/index.handlebars'
+		}),
+		new CleanWebpackPlugin()
+	],
+	devServer:{
+		contentBase:path.resolve(__dirname, './dist'),
+		index:'index.html',
+		port:7000
+	}
 };
