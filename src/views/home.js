@@ -1,8 +1,9 @@
 import addImage from '../addImage.js';
 export default () => {
 	const views = `
-<div class="col-sm-10">
-    <h3 id="info"><img src="" alt=""> Abdelaziz SEKOUTI</h3>
+<div class="col-sm-10" id="info">
+    <img src="" alt=""> 
+    <h3>Abdelaziz SEKOUTI</h3>
     <ul>
         <li>Derb Bouaalame n°185 S.Y.B.A. 40050 Marrakech</li>
         <li> Tel : 0660361784</li>

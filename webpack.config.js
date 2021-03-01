@@ -40,7 +40,7 @@ module.exports = {
 	},
 	plugins: [
 		new HTMLWebpackPlugin({
-			template: './src/index.handlebars'
+			template: './src/index.html'
 		}),
 		new CleanWebpackPlugin()
 	],

@@ -34,7 +34,7 @@ body {
 			border-radius: 20px;
 			box-shadow: 0 0 4px $ancrecolor;
 			min-height: 10vh;
-			width: 100%;
+			width: fit-content;
 			padding: 10pX 40pX 0;
 			img{
 			border:5px solid #fff;
@@ -48,13 +48,14 @@ body {
 			h1,h2,h3,h4{
 			font-size: 1rem;
 			color:#c0f;
+			width: fit-content;
 
 		}
 		}
 		}
 @media (max-width:770px){
 			ul{
-			width: 100%;
+			width: fit-content;
 			li{
 				font-size: 1.1em;
 				width: 100%;
@@ -75,16 +76,19 @@ body {
 			box-shadow:-7px 12px 5px 5px #000;
 			color:rgb(14, 15, 3);
 		}
-			.showInfo h3 img{
-				width:100%;
-				border-radius: 10px;
-				margin-bottom: 10px;
-				padding: 0px;
+			.showInfo h3 {
+				width:fit-content;
+				img{
+					width:100%;
+					border-radius: 10px;
+					margin-bottom: 10px;
+					padding: 0px;
 
-			}
-			.showInfo h1,.showInfo h2,.showInfo h3,.showInfo h4{
-				color:rgb(29, 213, 226);
+				}
+				h1,h2,h3,h4{
+					color:rgb(29, 213, 226);
 
-			}
+				}
 		
+		}
 		}
